@@ -1,0 +1,1 @@
+web: gunicorn dished_server.wsgi
