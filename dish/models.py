@@ -125,8 +125,8 @@ class Restaurant(models.Model):
     """
     name = models.CharField(max_length=200)
     address = models.CharField(max_length=200)
-    state = models.Charfield(max_length=10)
-    country = models.Charfield(max_length=30)
+    state = models.CharField(max_length=10)
+    country = models.CharField(max_length=30)
     postal_code = models.CharField(max_length=6)
     phone_number = models.CharField(max_length=30, null=True, blank=True)
     open_hour = models.TimeField(null=True, blank=True)
