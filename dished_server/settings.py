@@ -9,13 +9,14 @@ ADMINS = (
 
 MANAGERS = ADMINS
 
+# local
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
         'NAME': 'dished_server',                      # Or path to database file if using sqlite3.
         # The following settings are not used with sqlite3:
-        'USER': 'dish',
-        'PASSWORD': '',
+        'USER': 'davinwong',
+        'PASSWORD': 'local',
         'HOST': '',                      # Empty for localhost through domain sockets or '127.0.0.1' for localhost through TCP.
         'PORT': '',                      # Set to empty string for default.
     }
@@ -125,6 +126,8 @@ INSTALLED_APPS = (
     # Uncomment the next line to enable admin documentation:
     # 'django.contrib.admindocs',
     'tastypie',
+    'dish',
+    'review',
 )
 
 # A sample logging configuration. The only tangible logging
@@ -156,9 +159,10 @@ LOGGING = {
     }
 }
 
+# HEROKU
 # Parse database configuration from $DATABASE_URL
-import dj_database_url
-DATABASES['default'] =  dj_database_url.config()
+# import dj_database_url
+# DATABASES['default'] =  dj_database_url.config()
 
 # Honor the 'X-Forwarded-Proto' header for request.is_secure()
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
