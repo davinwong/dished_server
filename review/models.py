@@ -5,7 +5,6 @@ from dish.models import Dish
 
 class Review(models.Model):
     """
-    speed measured in minutes
     service? should be part of restaurant, but we review dishes
     """
     dish = models.ForeignKey(Dish)
@@ -18,4 +17,4 @@ class Review(models.Model):
     sweet = models.DecimalField(max_digits=4, decimal_places=3)
     salt = models.DecimalField(max_digits=4, decimal_places=3)
     presentation = models.DecimalField(max_digits=4, decimal_places=3)
-    speed = models.IntegerField()
+    speed = models.IntegerField(help_text="minutes")
