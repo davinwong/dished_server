@@ -8,6 +8,7 @@ MEAL = [
     'dinner',
     'snack',
     'dessert',
+    'brunch',
 ]
 
 CATEGORY = [
@@ -114,25 +115,7 @@ COUNTRIES = [
 ]
 
 
-class Dish(models.Model):
-    """
-    could store some fields in review, but then calculate on every GET
-    should have properties that are drawn from its reviews
-    TODO: proper reference to array for selection field
-    TODO: could have multiple food types?
-    TODO: change image
-    alcohol?
-    """
-    restaurant = models.ForeignKey(Restaurant)
-    name = models.CharField(max_length=200)
-    category = models.CharField(max_length=200)
-    food_group = models.CharField(max_length=200)
-    dietary = models.CharField(max_length=200)
-    created = models.DateTimeField(auto_now=True)
-    image = models.CharField(max_length=200, null=True, blank=True)
-
-
-class Restaurant(model.Model):
+class Restaurant(models.Model):
     """
     One restaurant to many addresses?
     delivery? take-out? drive-thru? reservations? wifi? parking? outdoor?
@@ -150,3 +133,21 @@ class Restaurant(model.Model):
     close_hour = models.TimeField(null=True, blank=True)
     restaurant_type = models.CharField(max_length=200)
     cuisine = models.CharField(max_length=200, null=True, blank=True)
+
+
+class Dish(models.Model):
+    """
+    could store some fields in review, but then calculate on every GET
+    should have properties that are drawn from its reviews
+    TODO: proper reference to array for selection field
+    TODO: could have multiple food types?
+    TODO: change image
+    alcohol?
+    """
+    restaurant = models.ForeignKey(Restaurant)
+    name = models.CharField(max_length=200)
+    category = models.CharField(max_length=200)
+    food_group = models.CharField(max_length=200)
+    dietary = models.CharField(max_length=200)
+    created = models.DateTimeField(auto_now=True)
+    image = models.CharField(max_length=200, null=True, blank=True)
