@@ -3,7 +3,7 @@ dished_server
 
 ### REST API
 | endpoint                              | description                        |
-| --------------------------------------|:----------------------------------:|
+| --------------------------------------|------------------------------------|
 | /api/dish GET                         | get all dishes' details            |
 | /api/dish/123 GET                     | get single dish's details          |
 | /api/review/?dish=123 GET             | get all single dish's reviews      |
