@@ -2,6 +2,7 @@ from django.db import models
 from django.contrib.auth.models import User
 from dish.models import Dish
 
+
 class Review(models.Model):
     """
     speed measured in minutes
