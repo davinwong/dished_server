@@ -129,6 +129,7 @@ class Restaurant(models.Model):
     state = models.CharField(max_length=10)
     country = models.CharField(max_length=30)
     postal_code = models.CharField(max_length=6)
+    # created = models.DateTimeField(auto_now=True)
     phone_number = models.CharField(max_length=30, null=True, blank=True)
     open_hour = models.TimeField(null=True, blank=True)
     close_hour = models.TimeField(null=True, blank=True)
