@@ -1,7 +1,7 @@
 from tastypie.resources import ModelResource
 from django.contrib.auth.models import User
 from tastypie.authentication import BasicAuthentication
-from tastypie.authorization import DjangoAuthorization
+from tastypie.authorization import Authorization, DjangoAuthorization
 from dish.models import Restaurant, Dish, Review
 
 # TODO: better authentication
