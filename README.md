@@ -8,7 +8,7 @@ dished_server
 | /api/dish/123 GET                     | get single dish's details          |
 | /api/review/?dish=123 GET             | get all single dish's reviews      |
 | /api/review/456 GET, POST, PUT, DELETE| single review                      |
-| /api/restaurant/                      |                                    |
+| /api/restaurant/ GET, POST            | get all restaurants, create new    |
 
 not completed
 /api/dish/?category=5 GET
