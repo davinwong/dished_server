@@ -18,3 +18,4 @@ class Review(models.Model):
     salt = models.DecimalField(max_digits=4, decimal_places=3)
     presentation = models.DecimalField(max_digits=4, decimal_places=3)
     speed = models.IntegerField(help_text="minutes")
+    comment = models.CharField(max_length=200)
