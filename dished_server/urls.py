@@ -1,11 +1,13 @@
 from django.conf.urls import patterns, include, url
-from dish.api import RestaurantResource, DishResource
+from dish.api import RestaurantResource, DishResource, ReviewResource
 
 # Uncomment the next two lines to enable the admin:
 # from django.contrib import admin
 # admin.autodiscover()
 
 dish_resource = DishResource()
+restaurant_resource = RestaurantResource()
+review_resource = ReviewResource()
 
 urlpatterns = patterns('',
     # Examples:
@@ -18,4 +20,6 @@ urlpatterns = patterns('',
     # Uncomment the next line to enable the admin:
     # url(r'^admin/', include(admin.site.urls)),
     (r'^api/', include(dish_resource.urls)),
+    (r'^api/', include(restaurant_resource.urls)),
+    (r'^api/', include(review_resource.urls)),
 )
