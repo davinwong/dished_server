@@ -6,6 +6,8 @@ Needs some thinking
 number of requests vs size of request
 should server be filtering more or android? (fetch more info and calculate on android, or fetch relevant info filtered by server?
 
+mobile apps should have infrequent, larger requests due to lower bandwidth
+
 ### REST API
 | endpoint                              | description                        |
 | --------------------------------------|------------------------------------|
