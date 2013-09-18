@@ -1,14 +1,14 @@
 dished_server
 =============
 
-Needs some thinking
+Dished is a dish review app for Android currently in progress.
 
-number of requests vs size of request
-should server be filtering more or android? (fetch more info and calculate on android, or fetch relevant info filtered by server?
+This is the server with a rest api to store persistent data.
 
-mobile apps should have infrequent, larger requests due to lower bandwidth
+Django, Tastypie  
+Heroku, PostgreSQL
 
-### REST API
+## REST API
 | endpoint                              | description                        |
 | --------------------------------------|------------------------------------|
 | /api/dish/ POST                       | create new                         |
@@ -20,7 +20,7 @@ mobile apps should have infrequent, larger requests due to lower bandwidth
 | /api/restaurant/ GET, POST            | get all restaurants, create new    |
 
 
-restaurant post payload
+### restaurant post payload
 
 {  
 "name": "McDonald's 3",  
@@ -33,3 +33,10 @@ restaurant post payload
 
 not completed
 /api/dish/?category=5 GET
+
+
+### questions:
+number of requests vs size of request
+should server be filtering more or android? (fetch more info and calculate on android, or fetch relevant info filtered by server?
+
+mobile apps should have infrequent, larger requests due to lower bandwidth
